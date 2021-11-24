@@ -9,5 +9,6 @@ const middle = function(array) {
     return array[Math.floor(array.length / 2)];
   }
 };
+console.log(middle([1, 2])); // => []
 
 module.exports = middle;
