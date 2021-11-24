@@ -1,17 +1,4 @@
-const assertEqual = function(actual, expected) {
-  if (actual === expected) {
-    console.log(`✅✅✅ Assertion Passed:   ${actual}===${expected}`);
-  } else {
-    console.log(`🛑🛑🛑 Assertion Failed :  ${actual} !== ${expected}`);
-  }
-};
-
-const bestTVShowsByGenre = {
-  // eslint-disable-next-line camelcase
-  sci_fi: 'The Expanse',
-  comedy: 'Brooklyn Nine-Nine',
-  drama: 'The Wire'
-};
+const assertEqual = require('./assertEqual');
 
 const findKeyByValue = function(obj, val) {
   let result = undefined;
@@ -21,6 +8,16 @@ const findKeyByValue = function(obj, val) {
     }
   }
   return result;
+};
+
+module.exports = findKeyByValue;
+
+//Test cases
+const bestTVShowsByGenre = {
+  // eslint-disable-next-line camelcase
+  sci_fi: 'The Expanse',
+  comedy: 'Brooklyn Nine-Nine',
+  drama: 'The Wire'
 };
 
 //findKeyByValue(bestTVShowsByGenre, 'The Wire')
