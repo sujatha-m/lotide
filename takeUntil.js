@@ -14,10 +14,7 @@ const takeUntil = function(array, callback) {
 module.exports = takeUntil;
 
 //Test cases
-//expected output[ 1, 2, 5, 7, 2 ]
-const data1 = [1, 2, 5, 7, 2, -1, 2, 4, 5];
-const results1 = takeUntil(data1, x => x < 0);
-assertArraysEqual(results1, [ 1, 2, 5, 7, 2 ]);
+
 
 //expected output[ 'I\'ve', 'been', 'to', 'Hollywood' ]
 const data2 = ["I've", "been", "to", "Hollywood", ",", "I've", "been", "to", "Redwood"];
