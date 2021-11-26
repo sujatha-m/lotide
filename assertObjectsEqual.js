@@ -9,19 +9,12 @@ const assertObjectsEqual = function(actual, expected) {
       `✅✅ Assertion Passed: ${inspect(actual)} === ${inspect(expected)}`
     );
   } else {
-    console.log(`🛑🛑 Assertion Failed: ${actual} !== ${expected}`);
+    console.log(`🛑🛑 Assertion Failed: ${inspect(actual)} !== ${inspect(expected)}`);
   }
 };
 
 module.exports = assertObjectsEqual;
 
-const car = {type:"Fiat", model:"500", color:"white"};
-const person = {firstName:"John", lastName:"Doe", age:50, eyeColor:"blue"};
-const num = {1: "a", 2: "b" };
-
-assertObjectsEqual(car, person);
-assertObjectsEqual(car, car);
-assertObjectsEqual(person, num);
 
 
 
